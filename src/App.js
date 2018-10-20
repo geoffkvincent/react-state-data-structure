@@ -7,8 +7,7 @@ class App extends React.Component {
 
   getUniqId = () => {
     return Math.floor(( 1 + Math.random()) * 0x10000)
-    .toString(16)
-    .subString(1)
+    
   }
 
   addItem = (item) => {
@@ -21,7 +20,7 @@ class App extends React.Component {
     const {todos} = this.state
     return (
       <>
-        <Form />
+        <Form addItem={this.addItem}/>
         <List listName= 'Todo List' todos={todos}/>
       </>
     )

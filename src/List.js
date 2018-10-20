@@ -4,7 +4,7 @@ const List = ({todos, listName}) => (
   <div>
     <h1>{listName}</h1>
     <ul>
-      {todos.map(t => <li key={t.id}>{t.content}</li>)}
+      {todos.map(t => <li key={t.id}>{t.item}</li>)}
     </ul>
   </div>
 )
