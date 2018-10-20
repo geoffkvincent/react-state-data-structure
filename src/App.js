@@ -10,8 +10,8 @@ class App extends React.Component {
     const {todos} = this.state
     return (
       <>
+        <Form />
         <List listName= 'Todo List' todos={todos}/>
-
       </>
     )
   }
