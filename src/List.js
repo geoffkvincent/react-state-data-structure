@@ -1,7 +1,7 @@
 import React from 'react'
 
-const List = () => {
-
-}
+const List = (props) => (
+  
+)
 
 export default List
