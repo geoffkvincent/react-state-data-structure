@@ -1,9 +1,15 @@
 import React from 'react'
 
 class Form extends React.Component {
+  state = { item: [] }
   render() {
     return (
-      null
+      <form>
+        <input
+          required
+          placeholder= 'Add Item'
+        />
+      </form>
     )
   }
 }
