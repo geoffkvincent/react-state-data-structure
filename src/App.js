@@ -8,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <List todos={this.state.todos}/>
+        <List listName= 'Todo List' todos={this.state.todos}/>
       </>
     )
   }
