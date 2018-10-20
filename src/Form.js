@@ -1,19 +1,26 @@
 import React from 'react'
 
 class Form extends React.Component {
-  state = { item: [] }
+  state = { item: '' }
 
-  handleSubmit = () => {
-    preventDefault()
+  handleChange = (e) => {
+    this.setState({ item: e.target.value })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
   }
 
   render() {
+    const {item} = this.state
     return (
       <form>
         <input
+          value={item}
+          item = 'item'
           required
           placeholder= 'Add Item'
-          onChange
+          onChange={this.handleChange}
         />
       </form>
     )
