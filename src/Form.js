@@ -9,12 +9,14 @@ class Form extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
+    this.addItem.props(this.state.item)
+    this.setState({ item: '' })
   }
 
   render() {
     const {item} = this.state
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
           value={item}
           item = 'item'
