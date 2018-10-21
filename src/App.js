@@ -6,6 +6,10 @@ import Footer from './Footer'
 class App extends React.Component {
   state = {todos: [], filter: 'All' }
 
+  setFilter = (filter) => {
+    this.setState({ filter })
+  }
+
   getUniqId = () => {
     return Math.floor(( 1 + Math.random()) * 0x10000)
   }
