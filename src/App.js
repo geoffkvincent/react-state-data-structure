@@ -34,13 +34,25 @@ class App extends React.Component {
       })
     })
   }
+
+  visibleItems = () => {
+    const {todos, filter } = this.state
+    switch(filter) {
+      case 'Active':
+        return todos.filter( t => !t.complete)
+      case 'Complete':
+        return todos.filter( t => t.complete)
+      default:
+        return todos
+    }
+  }
   
   render() {
     const {todos, filter} = this.state
     return (
       <>
         <Form addItem={this.addItem}/>
-        <List listName= 'Todo List' todos={todos} todoClick={this.handleClick}/>
+        <List listName= 'Todo List' todos={this.visibleItems()} todoClick={this.handleClick}/>
         <Footer filter={filter} setFilter={this.setfilter}/>
       </>
     )
