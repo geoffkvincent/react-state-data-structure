@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const styles = {
   link: { 
@@ -10,20 +10,17 @@ const styles = {
   }
 }
 
-const filterLink = (current, item, setFilter) => {
-  if(current === item) 
-    return <span>{item}</span>
+const filterLink = (current, name, setFilter) => { 
+  if (current === name)
+    return <span>{name}</span>
   else
-    return <span style={styles.link} onClick={() => setFilter(item) }>{item}</span>
-  
+    return <span style={styles.link} onClick={() => setFilter(name) }>{name}</span>
 }
 
-const Footer = ({filter, setFilter}) => (
+const Footer = ({ filter, setFilter }) => (
   <div>
-    { ['All', 'Active', 'Complete',].map( f => filterLink(filter, f, setFilter))}
+    { ['All', 'Active', 'Complete'].map( f => filterLink(filter, f, setFilter) ) }
   </div>
 )
 
-
-
-export default Footer
+export default Footer;

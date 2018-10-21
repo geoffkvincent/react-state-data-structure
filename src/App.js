@@ -36,14 +36,14 @@ class App extends React.Component {
   }
 
   visibleItems = () => {
-    const {todos, filter } = this.state
+    const { todos, filter } = this.state;
     switch(filter) {
       case 'Active':
-        return todos.filter( t => !t.complete)
+        return todos.filter( t => !t.complete )
       case 'Complete':
-        return todos.filter( t => t.complete)
+        return todos.filter( t=> t.complete )
       default:
-        return todos
+        return todos;
     }
   }
   
@@ -53,7 +53,7 @@ class App extends React.Component {
       <>
         <Form addItem={this.addItem}/>
         <List listName= 'Todo List' todos={this.visibleItems()} todoClick={this.handleClick}/>
-        <Footer filter={filter} setFilter={this.setfilter}/>
+        <Footer filter={filter} setFilter={this.setFilter}/>
       </>
     )
   }
