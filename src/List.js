@@ -1,10 +1,11 @@
 import React from 'react'
+import Todo from './Todo'
 
 const List = ({todos, listName}) => (
   <div>
     <h1>{listName}</h1>
     <ul>
-      {todos.map(t => <li key={t.id}>{t.item}</li>)}
+      {todos.map(t => <Todo key={t.id}>{...item} />)}
     </ul>
   </div>
 )

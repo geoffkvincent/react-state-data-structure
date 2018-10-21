@@ -1,7 +1,6 @@
 import React from 'react'
 import List from './List'
 import Form from './Form'
-import Todo from './Todo'
 
 class App extends React.Component {
   state = {todos: [] }
@@ -23,7 +22,6 @@ class App extends React.Component {
       <>
         <Form addItem={this.addItem}/>
         <List listName= 'Todo List' todos={todos}/>
-        <Todo />
       </>
     )
   }
