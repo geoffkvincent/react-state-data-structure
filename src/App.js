@@ -7,7 +7,6 @@ class App extends React.Component {
 
   getUniqId = () => {
     return Math.floor(( 1 + Math.random()) * 0x10000)
-    
   }
 
   addItem = (item) => {
@@ -15,6 +14,8 @@ class App extends React.Component {
     const todo = { item, id: this.getUniqId(), complete: false}
     this.setState({todos:[todo, ...todos] })
   }
+
+  handle
   
   render() {
     const {todos} = this.state

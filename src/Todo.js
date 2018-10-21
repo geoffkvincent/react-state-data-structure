@@ -8,8 +8,8 @@ const styles = {
 const Todo = ({id, item, complete, todoClick}) => {
   <li
     style={complete ? {...styles.todo, ...styles.complete } : styles.todo }
-    onClick={ () => todoClick(id) }
-  >
+    onClick=
+  >     
     {item}
   </li>
 }
