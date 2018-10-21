@@ -5,7 +5,7 @@ const List = ({todos, listName}) => (
   <div>
     <h1>{listName}</h1>
     <ul>
-      {todos.map(t => <Todo key={t.id}>{...item} />)}
+      {todos.map(t => <Todo key={t.id} {...t} />)}
     </ul>
   </div>
 )
