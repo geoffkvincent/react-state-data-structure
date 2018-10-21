@@ -1,9 +1,10 @@
 import React from 'react'
 import List from './List'
 import Form from './Form'
+import Footer from './Footer'
 
 class App extends React.Component {
-  state = {todos: [] }
+  state = {todos: [], filter: 'All' }
 
   getUniqId = () => {
     return Math.floor(( 1 + Math.random()) * 0x10000)
@@ -31,11 +32,12 @@ class App extends React.Component {
   }
   
   render() {
-    const {todos} = this.state
+    const {todos, filter} = this.state
     return (
       <>
         <Form addItem={this.addItem}/>
         <List listName= 'Todo List' todos={todos} todoClick={this.handleClick}/>
+        <Footer filter={filter} setFilter={this.setfilter}/>
       </>
     )
   }
