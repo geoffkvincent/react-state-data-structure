@@ -7,7 +7,7 @@ class App extends React.Component {
   state = {todos: [], filter: 'All' }
 
   setFilter = (filter) => {
-    this.setState({ filter })
+    this.setState({ filter })   
   }
 
   getUniqId = () => {
