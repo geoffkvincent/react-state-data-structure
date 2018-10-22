@@ -1,5 +1,6 @@
 import React from 'react'
 import InitialData from './InitialData'
+import List from './List'
 
 class App extends React.Component {
   state= InitialData
