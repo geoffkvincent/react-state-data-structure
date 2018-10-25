@@ -1,10 +1,10 @@
 import React from 'react'
-import InitialData from './InitialData'
+
 import List from './List'
 import Form from './Form'
 
 class App extends React.Component {
-  state = InitialData
+  state = 
 
   render() {
     const {todos} = this.state
