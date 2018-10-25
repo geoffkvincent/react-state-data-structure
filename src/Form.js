@@ -7,12 +7,13 @@ class Form extends React.Component {
   render() {
     const {name} = this.state
     return(
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
           value={name}
           name="name"
           required
           placeholder="add item"
+          onChange={this.handleChange}
         />
       </form>
     )
