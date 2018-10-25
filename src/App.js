@@ -12,7 +12,7 @@ class App extends React.Component {
   addItem = (name) => {
     const {todos} = this.state
     const todo = ({name, id: this.getId(), complete:false})
-    this.setState([todo, ...todos])
+    this.setState({ todos: [todo, ...todos] })
   }
 
   render() {
