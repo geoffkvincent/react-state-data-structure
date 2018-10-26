@@ -6,7 +6,9 @@ class App extends React.Component {
   
   render() {
     return (
-      null
+      <div>
+        <List />
+      </div>
     )
   }
 }
