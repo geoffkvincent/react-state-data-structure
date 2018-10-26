@@ -1,9 +1,9 @@
 import React from 'react'
-import initialState from './InitialState'
+import initialData from './InitialData'
 import List from './List'
 
 class App extends React.Component {
-  state = initialState
+  state = initialData
   
   render() {
     const {todos} = this.state
