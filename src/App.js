@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <Form addItem={this.addItem}/>
-        <List todos={todos}/>
+        <List todos={todos} todoClick={this.handleClick}/>
       </div>
     )
   }
