@@ -19,7 +19,7 @@ const filterLink = (current, name, setFilter) => {
 
 const Footer = ({filter, setFilter}) => (
   <div>
-    
+    { ['All', 'Active', 'Complete'].map( f => filterLink(filter, f, setFilter) ) }
   </div>
 )
 

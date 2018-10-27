@@ -1,6 +1,7 @@
 import React from 'react'
 import List from './List'
 import Form from './Form'
+import Footer from './Footer'
 
 class App extends React.Component {
   state = {todos: []}
@@ -36,6 +37,7 @@ class App extends React.Component {
       <div>
         <Form addItem={this.addItem}/>
         <List todos={todos} todoClick={this.handleClick}/>
+        <Footer />
       </div>
     )
   }
