@@ -30,6 +30,18 @@ class App extends React.Component {
       })
     })
   }
+
+  visibleItems = () => {
+    const {todos, filter } = this.state
+    switch(filter) {
+      case 'Active':
+        return todos.filter(t => !t.complete )
+      case 'Complete':
+        return todos.filter( t=> t.complete)
+      default: 
+        return todos
+    }
+  }
   
   render() {
     const {todos} = this.state
