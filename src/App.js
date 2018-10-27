@@ -48,7 +48,7 @@ class App extends React.Component {
     return (
       <div>
         <Form addItem={this.addItem}/>
-        <List todos={todos} todoClick={this.handleClick}/>
+        <List todos={this.visibleItems()} todoClick={this.handleClick}/>
         <Footer />
       </div>
     )
