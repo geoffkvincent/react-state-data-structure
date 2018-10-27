@@ -4,7 +4,11 @@ import Form from './Form'
 import Footer from './Footer'
 
 class App extends React.Component {
-  state = {todos: []}
+  state = {todos: [], filter: 'All'}
+
+  setFilter = (filter) => {
+    this.setState({filter})
+  }
 
   getId = () => {
     return Math.floor((1 + Math.random()) * 0x10000)
@@ -44,12 +48,12 @@ class App extends React.Component {
   }
   
   render() {
-    const {todos} = this.state
+    const {todos,filter} = this.state
     return (
       <div>
         <Form addItem={this.addItem}/>
         <List todos={this.visibleItems()} todoClick={this.handleClick}/>
-        <Footer />
+        <Footer filter={filter} setFilter={this.setFilter}/>
       </div>
     )
   }
