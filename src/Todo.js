@@ -5,9 +5,10 @@ const styles = {
   complete: { color: 'grey', textDecoration: 'line-through'}
 }
 
-const Todo = ({id, name, complete}) => (
+const Todo = ({id, name, complete, todoClick}) => (
   <li
     style={complete ? {...styles.todo, ...styles.complete} : styles.todo}
+    onClick={() => todoClick(id)}
   >
     {name}
   </li>
