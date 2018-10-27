@@ -5,8 +5,12 @@ const styles = {
   complete: { color: 'grey', textDecoration: 'line-through'}
 }
 
-const Todo = () => {
-
-}
+const Todo = ({id, name, complete}) => (
+  <li
+    style={complete ? {...styles.todo, ...styles.complete} : styles.todo}
+  >
+    {name}
+  </li>
+)
 
 export default Todo
