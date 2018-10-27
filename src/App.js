@@ -5,19 +5,21 @@ import Form from './Form'
 class App extends React.Component {
   state = {todos: []}
 
-  getId = (name) => {
-    Math.floor(1 + Map.random())
+  getId = () => {
+    return Math.floor((1 + Math.random()) * 0x10000)
   }
 
-  addItem = () => {
-    
+  addItem = (name) => {
+    const {todos} = this.state
+    const todo = {name, id: this.getId(), complete: false}
+    this.setState({todos : [todo, ...todos]})
   }
   
   render() {
     const {todos} = this.state
     return (
       <div>
-        <Form />
+        <Form addItem={this.addItem}/>
         <List todos={todos}/>
       </div>
     )

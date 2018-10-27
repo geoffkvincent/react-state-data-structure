@@ -1,13 +1,14 @@
 import React from 'react'
+import Todo from './Todo'
 
 const List = ({todos}) => (
   <div>
     <ul>
       {todos.map(t =>
-        <li key={t.id}>
-          {t.content}
-        </li>  
-      )}
+        <Todo key={t.id}
+          {...t}
+        />
+        )}    
     </ul>
   </div>
 )
