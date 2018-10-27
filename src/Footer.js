@@ -16,3 +16,11 @@ const filterLink = (current, name, setFilter) => {
   else
     return <span style={styles.link} onClilck={() => setFilter(name) }>{name}</span>
 }
+
+const Footer = ({filter, setFilter}) => (
+  <div>
+    
+  </div>
+)
+
+export default Footer
