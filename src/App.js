@@ -9,7 +9,7 @@ class App extends React.Component {
     const {todos} = this.state
     return (
       <div>
-       <List todos={todos}/>
+       <List listName="Todo List" todos={todos}/>
       </div>
     )
   }
