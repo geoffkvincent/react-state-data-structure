@@ -8,7 +8,11 @@ class App extends React.Component {
     const {todos} = this.state
     return (
       <div>
-
+        <ul>
+          {todos.map(t =>
+            <li key={t.id}>{t.content}</li> 
+          )}
+        </ul>
       </div>
     )
   }
