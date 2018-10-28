@@ -8,6 +8,7 @@ class App extends React.Component {
     const {todos} = this.state
     return (
       <div>
+        <h1>Todos</h1>
         <ul>
           {todos.map(t =>
             <li key={t.id}>{t.content}</li> 
