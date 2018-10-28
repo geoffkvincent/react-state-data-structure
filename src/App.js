@@ -1,5 +1,6 @@
 import React from 'react'
 import initialData from './InitialData'
+import List from './List'
 
 class App extends React.Component {
   state=initialData
@@ -8,7 +9,7 @@ class App extends React.Component {
     const {todos} = this.state
     return (
       <div>
-       <List />
+       <List todos={todos}/>
       </div>
     )
   }
