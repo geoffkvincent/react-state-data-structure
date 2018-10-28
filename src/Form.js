@@ -3,6 +3,10 @@ import React from 'react'
 class Form extends React.Component {
   state={name: ''}
 
+  handleChange = (e) => {
+    this.setState({name: e.target.value})
+  }
+
   render() {
     const {name} = this.state
     return (
