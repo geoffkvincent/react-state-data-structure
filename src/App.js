@@ -5,8 +5,15 @@ class App extends React.Component {
   state= initialData
 
   render() {
+    const{todos} = this.state
     return(
-      null
+      <div>
+        <ul>
+          {todos.map( t => 
+            <li >{t.content}</li>  
+          )}
+        </ul>
+      </div>
     )
   }
 }
