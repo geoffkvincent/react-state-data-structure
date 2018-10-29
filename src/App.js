@@ -10,7 +10,7 @@ class App extends React.Component {
       <div>
         <ul>
           {todos.map( t => 
-            <li >{t.content}</li>  
+            <li >{t.content}</li>   
           )}
         </ul>
       </div>
