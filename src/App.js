@@ -1,10 +1,9 @@
 import React from 'react'
-import initialData from './InitialData'
 import List from './List'
 import Form from './Form'
 
 class App extends React.Component {
-  state= initialData
+  state= { todos: [] }
 
   render() {
     const{todos} = this.state
