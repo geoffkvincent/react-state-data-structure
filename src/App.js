@@ -7,7 +7,7 @@ class App extends React.Component {
 
   addItem = (name) => {
     const {todos} = this.state
-    const id = Math.floor((1 + Math.random) * 0x10000)
+    const id = Math.floor((1 + Math.random()) * 0x10000)
     const todo = {name, id, complete: false}
     this.setState({ todos: [todo, ...todos]})
   }
