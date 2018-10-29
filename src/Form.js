@@ -9,7 +9,7 @@ class Form extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    //submitform
+    this.props.addItem(this.state.name)
     this.setState({name: ''})
   }
 

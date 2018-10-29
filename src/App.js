@@ -16,7 +16,7 @@ class App extends React.Component {
     const{todos} = this.state
     return(
       <div>
-        <Form />
+        <Form addItem={this.addItem}/>
         <List listName="Todo List" todos={todos}/>
       </div>
     )
