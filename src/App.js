@@ -17,6 +17,10 @@ class App extends React.Component {
     this.setState({ todos: [todo, ...todos]})
   }
 
+  visibleItems = () => {
+    
+  }
+
   handleClick = (id) => {
     const {todos} = this.state
     this.setState({ 
