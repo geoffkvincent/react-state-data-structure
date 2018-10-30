@@ -1,9 +1,14 @@
 import React from 'react'
 import List from './List'
 import Form from './Form'
+import Footer from './Footer'
 
 class App extends React.Component {
-  state= { todos: [] }
+  state= { todos: [], view: 'All' }
+
+  setFilter = (view) => {
+    this.setState({view})
+  }
 
   addItem = (name) => {
     const {todos} = this.state
@@ -12,12 +17,28 @@ class App extends React.Component {
     this.setState({ todos: [todo, ...todos]})
   }
 
+  handleClick = (id) => {
+    const {todos} = this.state
+    this.setState({ 
+      todos: todos.map( todo => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            complete: !todo.complete
+          }
+        }
+        return todo
+      })
+    })
+  }
+
   render() {
-    const{todos} = this.state
+    const{todos, view} = this.state
     return(
       <div>
         <Form addItem={this.addItem}/>
-        <List listName="Todo List" todos={todos}/>
+        <List listName="Todo List" todos={todos} todoClick={this.handleClick}/>
+        <Footer view={view} setFilter={this.setFilter}/>
       </div>
     )
   }
