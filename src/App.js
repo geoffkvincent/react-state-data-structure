@@ -18,7 +18,15 @@ class App extends React.Component {
   }
 
   visibleItems = () => {
-    
+    const { todos, view } = this.state
+    switch(view) {
+      case 'Active':
+        return todos.filter(t => !t.complete)
+      case 'Complete':
+        return todos.filter(t => t.complete)
+      default:
+        return todos
+    }  
   }
 
   handleClick = (id) => {
