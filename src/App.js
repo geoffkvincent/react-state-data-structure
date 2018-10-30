@@ -45,11 +45,11 @@ class App extends React.Component {
   }
 
   render() {
-    const{todos, view} = this.state
+    const{view} = this.state
     return(
       <div>
         <Form addItem={this.addItem}/>
-        <List listName="Todo List" todos={todos} todoClick={this.handleClick}/>
+        <List listName="Todo List" todos={this.visibleItems} todoClick={this.handleClick}/>
         <Footer view={view} setFilter={this.setFilter}/>
       </div>
     )
