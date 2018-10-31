@@ -1,7 +1,7 @@
 import React from 'react'
 import Todo from './Todo'
 
-const List = ({todos, listName, todoClick}) => (
+const List = ({todos, listName, todoClick, todoEdit}) => (
   <div>
     <h1>{listName}</h1>
     <ul>
@@ -10,6 +10,7 @@ const List = ({todos, listName, todoClick}) => (
             key={t.id}
             {...t}
             todoClick={todoClick}
+            todoEdit={todoEdit}
           />
         )
       }

@@ -13,9 +13,7 @@ const Todo = ({name, id, complete, todoClick, todoEdit }) => (
     
   >
     {name}
-    <button
-      onClick={() => todoEdit(id)}
-    >
+    <button onClick={() => todoEdit(id)} >
       Edit
     </button>
   </li>
