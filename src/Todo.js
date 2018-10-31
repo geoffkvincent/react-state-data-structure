@@ -9,8 +9,13 @@ const Todo = ({name, id, complete, todoClick}) => (
   <li
     style= {complete ? {...styles.todo, ...styles.complete} : styles.todo}
     onClick={() => todoClick(id)}
+    
   >
     {name}
+    <button
+    >
+      Edit
+    </button>
   </li>
 )
 

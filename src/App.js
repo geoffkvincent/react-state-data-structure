@@ -49,7 +49,7 @@ class App extends React.Component {
     return(
       <div>
         <Form addItem={this.addItem}/>
-        <List listName="Todo List" todos={this.visibleItems} todoClick={this.handleClick}/>
+        <List listName="Todo List" todos={this.visibleItems()} todoClick={this.handleClick}/>
         <Footer view={view} setFilter={this.setFilter}/>
       </div>
     )
