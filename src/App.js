@@ -4,7 +4,7 @@ import Form from './Form'
 import Footer from './Footer'
 
 class App extends React.Component {
-  state= { todos: [], view: 'All' }
+  state= { todos: [], view: 'All', showForm: false }
 
   setFilter = (view) => {
     this.setState({view})
@@ -45,7 +45,7 @@ class App extends React.Component {
   }
 
   handleEdit = (id) => {
-    
+  
   }
 
   render() {
