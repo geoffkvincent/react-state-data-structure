@@ -10,6 +10,10 @@ class App extends React.Component {
     this.setState({view})
   }
 
+  updateForm = (showform) => {
+    this.setState({showform})
+  }
+
   addItem = (name) => {
     const {todos} = this.state
     const id = Math.floor((1 + Math.random()) * 0x10000)
@@ -45,7 +49,6 @@ class App extends React.Component {
   }
 
   handleEdit = (id) => {
-  
   }
 
   render() {

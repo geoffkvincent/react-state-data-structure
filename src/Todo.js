@@ -6,19 +6,21 @@ const styles = {
 }
 
 
+
 const Todo = ({name, id, complete, todoClick, todoEdit }) => (
   <li
     style= {complete ? {...styles.todo, ...styles.complete} : styles.todo}
-    
-    
   >
     {name}
     <br/>
-    <button onClick={() => todoEdit(id)} >
+    <button type="button" onClick={() => todoEdit(id)} >
       Edit
     </button>
     <button onClick={() => todoClick(id)} >
       Done?
+    </button>
+    <button>
+      Delete
     </button>
   </li>
 )
