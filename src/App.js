@@ -6,7 +6,13 @@ class App extends React.Component {
 
   render(){
     return (
-      
+      <div>
+        <ul>
+          {this.state.todos.map(todo => 
+            <li>{todo.content}</li>
+          )}
+        </ul>
+      </div>
     )
   }
 }
