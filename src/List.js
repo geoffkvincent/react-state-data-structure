@@ -1,9 +1,11 @@
 import React from 'react'
 
-const List = () => {
-  
-  {this.state.todos.map(todo => 
-    <li>{todo.content}</li>
-  )}
-        
-}
+const List = ({todos}) => (
+  <div>
+    {todos.map(todo => 
+      <li>{todo.content}</li>
+    )}
+  </div>        
+)
+
+export default List
