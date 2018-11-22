@@ -6,9 +6,10 @@ class App extends React.Component {
   state = initialData
 
   render(){
+    const {todos} = this.state
     return (
       <ul>
-        <List />
+        <List todos = {todos}/>
       </ul>
     )
   }
