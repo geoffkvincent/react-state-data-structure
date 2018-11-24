@@ -1,5 +1,4 @@
 import React from 'react'
-import initialData from './InitialData'
 import List from './List'
 import Form from './Form'
 

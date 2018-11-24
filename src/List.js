@@ -4,7 +4,7 @@ const List = ({todos}) => (
   <ul>
     { todos.map(todo => 
         <li key={todo.id}>
-          {todo.content}
+          {todo.name}
         </li>
       )
     }
