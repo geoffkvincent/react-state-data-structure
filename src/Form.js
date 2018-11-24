@@ -4,11 +4,11 @@ class Form extends React.Component {
   state = { name: ''}
 
   handleSubmit = (e) => {
-    e.preventDefault
+    e.preventDefault()
   }
 
   handleChange = (e) => {
-  
+    this.setState({name: e.target.value})
   }
 
   render() {
