@@ -6,11 +6,19 @@ import Form from './Form'
 class App extends React.Component {
   state = initialData
 
+  getId = () => {
+    
+  }
+
+  addItems = () => {
+  
+  }
+
   render(){
     const {todos} = this.state
     return (
       <div>
-        <Form />
+        <Form addItems= {this.addItems}/>
         <List todos = {todos}/>
       </div>
     )
