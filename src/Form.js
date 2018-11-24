@@ -5,7 +5,9 @@ class Form extends React.Component {
 
   render() {
     return(
-      null
+      <form>
+        <input></input>
+      </form>
     )
   }
 }
