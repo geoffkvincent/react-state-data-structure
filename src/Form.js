@@ -4,9 +4,14 @@ class Form extends React.Component {
   state = { name: ''}
 
   render() {
+    const {name} = this.state
     return(
       <form>
-        <input></input>
+        <input 
+          value = {name}
+          required
+          placeholder = 'Item'
+        />
       </form>
     )
   }
