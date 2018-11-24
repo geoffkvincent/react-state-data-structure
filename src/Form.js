@@ -3,12 +3,12 @@ import React from 'react'
 class Form extends React.Component {
   state = { name: ''}
 
-  handleSubmit = () => {
-
+  handleSubmit = (e) => {
+    e.preventDefault
   }
 
-  handleChange = () => {
-
+  handleChange = (e) => {
+  
   }
 
   render() {

@@ -11,9 +11,7 @@ class App extends React.Component {
     return (
       <div>
         <Form />
-        <ul>
-          <List todos = {todos}/>
-        </ul>
+        <List todos = {todos}/>
       </div>
     )
   }
