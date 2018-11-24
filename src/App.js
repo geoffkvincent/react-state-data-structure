@@ -4,14 +4,16 @@ import List from './List'
 import Form from './Form'
 
 class App extends React.Component {
-  state = initialData
+  state = { todos: [] }
 
   getId = () => {
-    
+    return Math.floor((1 + Math.random()) * 0x10000)
   }
 
-  addItems = () => {
-  
+  addItems = (name) => {
+    const {todos} = this.state
+    const todo = { name, id: this.getId(), complete: false}
+    this.setState({ todos: [todo, ...todos] })
   }
 
   render(){
