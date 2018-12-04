@@ -18,9 +18,12 @@ class App extends React.Component {
   render(){
     const {todos} = this.state
     return (
-      <div className='app'>
-        <Form addItems= {this.addItems}/>
-        <List todos = {todos}/>
+      <div>
+        <h1 className>Todo List</h1>
+        <div className='app'>
+          <Form addItems= {this.addItems}/>
+          <List todos = {todos}/>
+        </div>
       </div>
     )
   }
