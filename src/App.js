@@ -22,7 +22,9 @@ class App extends React.Component {
         <h1 className="header">Todo List</h1>
         <div className='app'>
           <Form addItems= {this.addItems}/>
-          <List todos = {todos}/>
+          <div className="list">
+            <List  todos = {todos}/>
+          </div>
         </div>
       </div>
     )
